@@ -102,3 +102,4 @@ ENV/
 .idea/
 *.bin
 *.lzs
+*_wrap.c
