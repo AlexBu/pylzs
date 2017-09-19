@@ -169,7 +169,7 @@ class Lzs():
             for i in range(code_buf_ptr):
                 out_body += chr(code_buf[i] & 0xff)
 
-        return struct.pack('<l', len(out_body)) +  out_body
+        return struct.pack('<l', len(out_body)) + out_body
 
     def decode(self, data):
         pass
