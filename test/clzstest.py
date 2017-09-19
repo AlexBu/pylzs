@@ -2,7 +2,9 @@
 # encoding: utf-8
 
 import unittest
-import lzs
+
+from clzs import clzs
+
 
 class LzsTest(unittest.TestCase):
 
@@ -15,14 +17,15 @@ class LzsTest(unittest.TestCase):
 
     def test_encode(self):
         for (e, d) in zip(self.enc_list, self.dec_list):
-            in_file = open(e, 'rb')
-            out_file = open(d, 'rb')
+            out_filename = d + ".bin"
+            clzs.lzs_encode_file(e, out_filename)
+            in_file = open(d, 'rb')
+            out_file = open(out_filename, 'rb')
             plain = in_file.read()
             expected_com = out_file.read()
             in_file.close()
             out_file.close()
-            actual_com = lzs.Lzs().encode(plain)
-            self.assertEqual(expected_com, actual_com)
+            self.assertEqual(plain, expected_com)
 
 if __name__ == '__main__':
     unittest.main()
