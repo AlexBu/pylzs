@@ -2,8 +2,7 @@
 # encoding: utf-8
 
 import unittest
-
-from clzs import clzs
+import clzs
 
 
 class LzsTest(unittest.TestCase):
@@ -18,7 +17,7 @@ class LzsTest(unittest.TestCase):
     def test_encode(self):
         for (e, d) in zip(self.enc_list, self.dec_list):
             out_filename = d + ".bin"
-            clzs.lzs_encode_file(e, out_filename)
+            clzs.encode_file(e, out_filename)
             in_file = open(d, 'rb')
             out_file = open(out_filename, 'rb')
             plain = in_file.read()

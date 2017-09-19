@@ -331,7 +331,7 @@ void lzs_decode(unsigned char *in, unsigned char *out, unsigned int *lengthin, u
 
 }
 
-int lzs_encode_file(char* in_filename, char* out_filename)
+int encode_file(char *in_filename, char *out_filename)
 {
     FILE *infile, *outfile;
     unsigned char *in, *out;
@@ -364,7 +364,7 @@ int lzs_encode_file(char* in_filename, char* out_filename)
     return 0;
 }
 
-int lzs_decode_file(char* in_filename, char* out_filename)
+int decode_file(char *in_filename, char *out_filename)
 {
     FILE *infile, *outfile;
     unsigned char *in, *out;

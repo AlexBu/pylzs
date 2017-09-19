@@ -100,7 +100,6 @@ ENV/
 .mypy_cache/
 
 .idea/
+build/
 *.bin
 *.lzs
-clzs/clzs.py
-clzs/clzs_wrap.c
