@@ -102,4 +102,5 @@ ENV/
 .idea/
 *.bin
 *.lzs
-*_wrap.c
+clzs/clzs.py
+clzs/clzs_wrap.c
