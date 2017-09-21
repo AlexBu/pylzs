@@ -346,7 +346,7 @@ int encode_file(char *in_filename, char *out_filename)
     lengthin = ftell(infile);
     fseek(infile, 0, SEEK_SET);
     in = (unsigned char *)malloc(lengthin);
-    out = (unsigned char *)malloc(lengthin*8);
+    out = (unsigned char *)malloc(lengthin*9);
     fread(in, 1, lengthin, infile);
 
     lzs_encode(in,out,&lengthin,&lengthout);
@@ -379,7 +379,7 @@ int decode_file(char *in_filename, char *out_filename)
     lengthin = ftell(infile);
     fseek(infile, 0, SEEK_SET);
     in = (unsigned char *)malloc(lengthin);
-    out = (unsigned char *)malloc(lengthin*8);
+    out = (unsigned char *)malloc(lengthin*9);
     fread(in, 1, lengthin, infile);
 
     lzs_decode(in,out,&lengthin,&lengthout);
